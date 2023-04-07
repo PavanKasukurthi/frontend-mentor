@@ -1,4 +1,5 @@
 # Frontend Mentor - QR code component
+Live url: https://qr-component-pavan.netlify.app/
 
 ![Design preview for the QR code component coding challenge](./design/desktop-preview.jpg)
 
