@@ -1,0 +1,22 @@
+.boxT {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rating {
+  color: var(--clr-primary);
+  background-color: hsl(217, 21%, 22%);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+
+.thankYou {
+  color: var(--clr-neutral-white);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.infoT {
+  text-align: center;
+}

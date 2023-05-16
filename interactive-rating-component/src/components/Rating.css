@@ -1,0 +1,93 @@
+.container {
+  display: flex;
+  justify-content: center;
+  background-color: var(--clr-neutral-veryDarkBlue);
+  height: 100vh;
+}
+
+.box {
+  margin-top: 10rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: var(--clr-neutral-darkBlue);
+  height: 400px;
+  width: 375px;
+  border-radius: 1rem;
+}
+
+.iconStar {
+  background-color: hsl(217, 21%, 22%);
+  height: 50px;
+  width: 50px;
+  padding: 17px;
+  border-radius: 25px;
+  margin-top: 0%;
+}
+
+.ratingValues {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading {
+  color: var(--clr-neutral-white);
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.info {
+  color: var(--clr-neutral-lightGrey);
+  font-weight: 400;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.rtng-btn {
+  width: 3.125rem;
+  height: 3.125rem;
+  background-color: hsl(217, 21%, 22%);
+  color: var(--clr-neutral-lightGrey);
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  font-family: inherit;
+  font-size: 1rem;
+  user-select: none;
+  outline: none;
+  padding-top: 0.3rem;
+  transition: 0.5s;
+}
+
+.rtng-btn:hover {
+  color: var(--clr-neutral-white);
+  background-color: var(--clr-primary);
+}
+
+.rtng-btn:focus {
+  color: var(--clr-neutral-white);
+  background-color: var(--clr-primary);
+}
+
+.submitButton {
+  background-color: var(--clr-primary);
+  color: var(--clr-neutral-white);
+  padding: 0.75rem 0.5rem;
+  border-radius: 5rem;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 3px;
+  font-weight: 700;
+  margin-top: 1rem;
+  transition: 0.5s;
+}
+
+.submitButton:hover {
+  color: var(--clr-primary);
+  background-color: var(--clr-neutral-white);
+}
