@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
 
 * {
@@ -139,3 +140,146 @@ button img {
     display: none;
   }
 }
+=======
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: hsl(30, 38%, 92%);
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid black; */
+  max-width: 500px;
+  max-height: 375px;
+  background-color: white;
+  border-radius: 0.5rem;
+  margin-top: 20vh;
+}
+
+.main-image {
+  width: 250px;
+  max-height: 375px;
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.image-mobile {
+  display: none;
+}
+
+.content {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  justify-items: stretch;
+}
+
+.heading,
+.info,
+.cancel-price {
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+}
+
+.heading {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 1rem;
+}
+
+.title,
+.price {
+  font-family: 'Fraunces', serif;
+  font-size: 29px;
+}
+
+.title {
+  line-height: 90%;
+  color: hsl(212, 21%, 14%);
+}
+
+.info {
+  font-size: 12px;
+  margin: 2rem 0;
+  line-height: 1.25rem;
+}
+
+.amount {
+  display: flex;
+  align-items: center;
+}
+
+.price {
+  margin-right: 1rem;
+  color: hsl(158, 36%, 37%);
+}
+
+.cancel-price {
+  text-decoration: line-through;
+  font-size: 10px;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  color: white;
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  border-radius: 0.3rem;
+  margin-top: 2rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+button img {
+  margin-right: 1rem;
+  width: 50%;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+  }
+  .box {
+    margin-top: 2rem;
+    flex-direction: column;
+    max-height: 550px;
+  }
+
+  .box img {
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  .image-mobile {
+    display: flex;
+  }
+
+  .image-desktop {
+    display: none;
+  }
+}
+>>>>>>> 956365cbb460464cfd3a0206227eff3e2820adee
