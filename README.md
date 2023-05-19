@@ -1,6 +1,6 @@
 ﻿# frontend-mentor
 
-Live Links:
+Live Project Links:
 
 1. [**Product Preview Card**](https://product-preview-card-pavan.netlify.app/)
 2. [**QR code component**](https://qr-component-pavan.netlify.app/)
