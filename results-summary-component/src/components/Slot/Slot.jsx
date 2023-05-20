@@ -7,6 +7,7 @@ const Slot = () => {
       {data.map((item, index) => {
         const { category, score, icon } = item
 
+        console.log(item.icon)
         return (
           <div key={index} className={`${category}Class slotClass`}>
             <div className="summaryName">
