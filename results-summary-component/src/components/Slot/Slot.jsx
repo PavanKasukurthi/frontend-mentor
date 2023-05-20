@@ -10,12 +10,13 @@ const Slot = () => {
         return (
           <div key={index} className={`${category}Class slotClass`}>
             <div className="summaryName">
-
-            <img src={icon} alt={`${category}-icon`} />
-            <span id='category'>{category}</span>
+              <img src={icon} alt={`${category}-icon`} />
+              <span id="category">{category}</span>
             </div>
 
-            <p className="subScore">{`${score} `} <span id='full'>/100</span> </p>
+            <p className="subScore">
+              {`${score} `} <span id="full">/100</span>{' '}
+            </p>
           </div>
         )
       })}
