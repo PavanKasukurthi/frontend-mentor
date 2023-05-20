@@ -1,0 +1,35 @@
+.box {
+  padding: 2rem;
+  border-radius: 0 1.5rem 1.5rem 0;
+  box-shadow: 7px 7px 20px var(--light-lavender);
+}
+
+button {
+  width: 100%;
+  border: none;
+  color: var(--white);
+  background-color: var(--dark-gray-blue);
+  border-radius: 2rem;
+  padding: 0.75rem 0;
+  margin-top: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(
+    var(--light-slate-background),
+    var(--royal-background)
+  );
+}
+
+.box h1 {
+  color: var(--dark-gray-blue);
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .box {
+    border-radius: 0 0 1.5rem 1.5rem;
+  }
+}

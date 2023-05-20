@@ -1,0 +1,61 @@
+.slotClass {
+  margin-bottom: 1rem;
+  padding: 0.75rem 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+  /* border: 1px solid black; */
+}
+
+.subScore {
+  font-weight: 700;
+}
+
+.summaryName {
+  display: flex;
+  align-items: center;
+}
+
+.summaryName img {
+  margin-right: 7px;
+}
+
+.ReactionClass {
+  background-color: hsl(0, 100%, 67%, 15%);
+  display: flex;
+  align-items: center;
+}
+
+.ReactionClass span {
+  color: var(--light-red);
+}
+
+.MemoryClass {
+  background-color: hsl(39, 100%, 56%, 15%);
+}
+
+.MemoryClass span {
+  color: var(--orangey-yellow);
+}
+
+.VerbalClass {
+  background-color: hsl(166, 100%, 37%, 15%);
+}
+
+.VerbalClass span {
+  color: var(--green-teal);
+}
+
+.VisualClass {
+  background-color: hsl(234, 85%, 45%, 15%);
+}
+
+.VisualClass span {
+  color: var(--cobalt-blue);
+}
+
+#full {
+  color: hsl(224, 30%, 27%, 50%);
+}
