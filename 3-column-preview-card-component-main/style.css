@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+body {
+  background-color: var(--very-light-gray);
+  height: 100vh;
+
+  color: var(--transparent-white);
+}
+
+.container {
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 auto;
+  margin-top: 4rem;
+  height: 450px;
+  border-radius: 1rem;
+}
+
+.col1 {
+  background-color: var(--bright-orange);
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.col1 button {
+  color: var(--bright-orange);
+}
+
+.col1 button:hover {
+  background-color: var(--bright-orange);
+  color: var(--transparent-white);
+}
+
+.col2 {
+  background-color: var(--dark-cyan);
+}
+
+.col2 button {
+  color: var(--dark-cyan);
+}
+
+.col2 button:hover {
+  background-color: var(--dark-cyan);
+  color: var(--transparent-white);
+}
+
+.col3 {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.col3 button {
+  color: var(--very-dark-cyan);
+}
+
+.col3 button:hover {
+  background-color: var(--very-dark-cyan);
+  color: var(--transparent-white);
+}
+
+.col {
+  padding: 3rem;
+}
+
+.col img {
+  width: 4rem;
+}
+
+.col h1 {
+  color: var(--transparent-white);
+  font-family: 'Big Shoulders Display', cursive;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  margin: 2rem 0;
+}
+
+.col p {
+  color: var(--transparent-white);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 4rem;
+
+  /* padding-right: 2rem; */
+}
+
+.col button {
+  border: 2px solid var(--very-light-gray);
+  background-color: var(--transparent-white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 376px) and (max-width: 768px) {
+  * {
+    font-size: 0.75rem;
+  }
+  .container {
+    margin: 2rem;
+  }
+}
+
+@media screen and (max-width: 486px) {
+  * {
+    scroll-behavior: smooth;
+  }
+
+  .container {
+    min-width: 250px;
+    max-width: 300px;
+    grid-template-columns: 1fr;
+    /* overflow: auto; */
+    margin: 0.5rem auto;
+  }
+
+  .col p {
+    margin-bottom: 1rem;
+  }
+
+  .col1 {
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  .col3 {
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+}
