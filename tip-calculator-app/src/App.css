@@ -1,0 +1,14 @@
+body {
+  background-color: var(--light-grayish-cyan);
+  display: grid;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--white);
+  width: 700px;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}

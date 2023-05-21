@@ -1,0 +1,13 @@
+.display {
+  background-color: var(--very-dark-cyan);
+  padding: 2rem;
+}
+
+.reset-btn {
+  width: 100%;
+  border: none;
+  border-radius: 0.15rem;
+  padding: .25rem;
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan)
+}
