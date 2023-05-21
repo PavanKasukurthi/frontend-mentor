@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+  /* Primary */
+
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  /* Neutral */
+
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+  font-size: 16px;
+  min-height: 100vh;
+  background-image: url(images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--pale-blue);
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  max-width: 450px;
+  background-color: white;
+  /* max-height: 600px; */
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: 1rem 0;
+  max-height: 650px;
+}
+
+.content {
+  /* display: grid; */
+  text-align: center;
+  padding: 2rem;
+}
+
+.title {
+  color: var(--dark-blue);
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.info {
+  color: var(--desaturated-blue);
+  line-height: 1.6;
+  padding: 0 2rem;
+}
+
+.plan {
+  background-color: var(--very-pale-blue);
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+}
+
+.plan a {
+  font-weight: 700;
+}
+
+.plan a:hover {
+  text-decoration: none;
+  color: hsl(245, 75%, 52%, 70%);
+}
+
+.plan-section-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.annual-plan {
+  margin-left: 20px;
+}
+
+.annual-plan h4 {
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+
+.annual-plan p {
+  color: var(--desaturated-blue);
+}
+
+.proceed-btn {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  background-color: var(--bright-blue);
+  color: white;
+  font-weight: 700;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+
+.proceed-btn:hover {
+  background-color: hsl(245, 75%, 52%, 70%);
+}
+
+.cancel-btn {
+  border: none;
+  background-color: transparent;
+  color: var(--desaturated-blue);
+  font-weight: 900;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  color: var(--dark-blue);
+}
+
+@media screen and (max-width: 450px) {
+  body {
+    background-image: url(images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 13px;
+  }
+
+  .container {
+    max-width: 90%;
+    margin: 0 auto;
+    max-height: 625px;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--bright-blue);
+  text-decoration: none;
+  font-weight: 700;
+}
