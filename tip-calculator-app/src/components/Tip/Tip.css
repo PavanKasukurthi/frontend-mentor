@@ -1,34 +1,50 @@
-.tipPercents {
+.tip {
+  max-width: 300px;
+}
+
+.subHeading {
+  color: var(--dark-grayish-cyan);
+  font-size: 12px;
+}
+
+.billInput {
+  background-image: url(../../../public/images/icon-dollar.svg);
+  margin-bottom: 1.5rem;
+}
+
+.button-group {
   display: grid;
-  /* grid-template-rows: 1fr 1fr; */
   grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-rows: auto;
-  align-items: center;
-  text-align: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  /* width: 300px; */
 }
 
-.percentTip {
-  color: var(--white);
+.button-group button {
+  border: none;
+  outline: none;
   background-color: var(--very-dark-cyan);
+  border-radius: 0.25rem;
+  color: var(--white);
+  padding: 0.2rem 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: 0.3s;
   cursor: pointer;
-  padding: 0.25rem 2rem;
 }
 
-.percentTip:hover {
+.button-group button:hover {
   background-color: var(--strong-cyan);
 }
 
-.percentTip,
-.customTip {
-  font-size: 24px;
-  width: 50px;
+.button-group input {
+  position: relative;
+  font-size: 1.2rem;
   margin: 0;
-
-  border: none;
-  border-radius: 0.25rem;
+  width: 100%;
+  padding: 0.2rem 0.5rem;
 }
 
-.customTip{
-    width: 4rem;
-    padding: 1rem;
+.numberOfPeople {
+  background-image: url(../../../public/images/icon-person.svg);
 }

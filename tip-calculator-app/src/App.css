@@ -7,8 +7,9 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 1rem;
   background-color: var(--white);
   width: 700px;
-  padding: 1.5rem;
+  padding: 1.3rem;
   border-radius: 1rem;
 }

@@ -1,14 +1,36 @@
 .display {
+  height: 100%;
   background-color: var(--very-dark-cyan);
-  padding: 2rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 12px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 2fr;
+}
 
+.total p:nth-of-type(1),
+.tipAmount p:nth-of-type(1) {
+  color: var(--white);
+}
+
+.total, .tipAmount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tipAmount-right, .total-right{
+  font-size: 17px;
+  color: var(--strong-cyan);
 }
 
 .reset-btn {
+  margin-top: 5.5rem;
+  max-height: 30px;
   width: 100%;
   border: none;
   border-radius: 0.15rem;
-  padding: .25rem;
+  padding: 0.25rem;
   background-color: var(--strong-cyan);
-  color: var(--very-dark-cyan)
+  color: var(--very-dark-cyan);
 }

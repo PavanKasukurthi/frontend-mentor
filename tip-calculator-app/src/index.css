@@ -27,13 +27,29 @@ input {
   font-size: 24px;
   font-weight: 700;
   text-align: right;
+  padding: 0.2rem 0.5rem;
   border: none;
   background-color: var(--very-light-grayish-cyan);
   color: var(--very-dark-cyan);
+  background-repeat: no-repeat;
+  background-size: 0.75rem;
+  background-position: left;
+  background-position-x: 0.75rem;
+  max-width: 300px;
+  border-radius: 0.25rem;
+  cursor: pointer;
 }
 
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+input:focus {
+  outline: 2px solid var(--strong-cyan);
+}
+
+button {
+  cursor: pointer;
 }
