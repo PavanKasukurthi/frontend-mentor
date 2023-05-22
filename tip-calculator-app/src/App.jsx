@@ -11,7 +11,9 @@ function App() {
 
   return (
     <>
-      <img src={logo} alt="logo" className='logo' />
+      <div className="main-logo">
+        <img src={logo} alt="logo" className="logo" />
+      </div>
       <div className="container">
         <div className="input-section">
           <Tip />

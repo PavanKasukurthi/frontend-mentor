@@ -4,6 +4,12 @@ body {
   justify-content: center;
 }
 
+.main-logo{
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0;
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;

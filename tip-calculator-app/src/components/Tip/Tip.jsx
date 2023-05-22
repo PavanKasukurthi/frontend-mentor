@@ -15,20 +15,20 @@ const Tip = () => {
 
         <p className="subHeading">Select Tip %</p>
         {/* <label>select tip %</label> */}
-        <div class="button-group">
-          <button id="5" class="percent-btn" type="button">
+        <div className="button-group">
+          <button id="5" className="percent-btn" type="button">
             5%
           </button>
-          <button id="10" class="percent-btn" type="button">
+          <button id="10" className="percent-btn" type="button">
             10%
           </button>
-          <button id="15" class="percent-btn" type="button">
+          <button id="15" className="percent-btn" type="button">
             15%
           </button>
-          <button id="25" class="percent-btn" type="button">
+          <button id="25" className="percent-btn" type="button">
             25%
           </button>
-          <button id="50" class="percent-btn" type="button">
+          <button id="50" className="percent-btn" type="button">
             50%
           </button>
           <input id="percent" type="text" placeholder="Custom" />
