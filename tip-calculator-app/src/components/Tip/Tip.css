@@ -33,7 +33,11 @@
   cursor: pointer;
 }
 
-.button-group button:hover {
+/* .button-group button:hover {
+  background-color: var(--strong-cyan);
+} */
+
+.button-group button:focus {
   background-color: var(--strong-cyan);
 }
 

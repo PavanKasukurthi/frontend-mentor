@@ -1,6 +1,9 @@
+import { useGlobalContext } from '../../context'
 import './Display.css'
 
 const Display = () => {
+  const { tipAmount, total, reset } = useGlobalContext()
+
   return (
     <div className="display">
       <div className="tipAmount">
@@ -9,7 +12,7 @@ const Display = () => {
           <p>/ person</p>
         </div>
         <div className="tipAmount-right">
-          <h1>$0.00</h1>
+          <h1>${tipAmount ? tipAmount : '0.00'}</h1>
         </div>
       </div>
       <div className="total">
@@ -18,10 +21,12 @@ const Display = () => {
           <p>/ person</p>
         </div>
         <div className="total-right">
-          <h1>$0.00</h1>
+          <h1>${total}</h1>
         </div>
       </div>
-      <button className="reset-btn">RESET</button>
+      <button className="reset-btn" onClick={reset}>
+        RESET
+      </button>
     </div>
   )
 }
