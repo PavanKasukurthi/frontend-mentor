@@ -24,4 +24,152 @@
 body {
   font-size: 15px;
   font-family: 'Poppins', sans-serif;
+  text-align: center;
+  min-height: 110vh;
+  align-items: center;
+}
+
+.container {
+  margin-top: 2rem;
+}
+
+.main-heading .heading-1 {
+  color: var(--grayish-blue);
+  font-weight: 200;
+}
+.main-heading .heading-2 {
+  color: var(--very-dark-blue);
+}
+
+.main-heading p {
+  color: var(--grayish-blue);
+  padding: 0 25rem 0 25rem;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.card {
+  max-width: 375px;
+  border-radius: 0.3rem;
+  text-align: left;
+  padding: 1.5rem;
+}
+
+.heading {
+  font-weight: 600;
+  color: var(--very-dark-blue);
+  margin-bottom: 0.5rem;
+}
+
+.content {
+  color: var(--grayish-blue);
+  font-weight: 400;
+}
+
+.img-icon {
+  display: flex;
+  justify-content: end;
+}
+
+.icon {
+  margin-top: 3em;
+}
+
+.card-supervisor {
+  box-shadow: 0 3px 9px var(--grayish-blue), 0 -3px 4px var(--cyan);
+}
+
+.card-teamBuilder {
+  box-shadow: 0 3px 9px var(--grayish-blue), 0 -3px 4px var(--red);
+  margin-bottom: 2rem;
+}
+
+.card-karma {
+  box-shadow: 0 3px 9px var(--grayish-blue), 0 -3px 4px var(--orange);
+}
+
+.card-calculator {
+  box-shadow: 0 3px 9px var(--grayish-blue), 0 -3px 4px var(--blue);
+}
+
+@media screen and (max-width: 1168px) {
+  body {
+    min-height: 120vh;
+    margin: 0 1rem;
+  }
+
+  .container {
+    margin-top: 1.5rem;
+  }
+
+  .main-heading p {
+    padding: 0;
+  }
+
+  .columns {
+    grid-template-columns: 1fr;
+    grid-row: auto;
+    row-gap: 2rem;
+  }
+
+  .column-1 {
+    max-width: 768px;
+    width: 80%;
+  }
+  .column-2 {
+    max-width: 768px;
+    width: 80%;
+  }
+  .column-3 {
+    max-width: 768px;
+    width: 80%;
+  }
+
+  .card {
+    max-width: 768px;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  body {
+    min-height: 120vh;
+    margin: 0 1rem;
+  }
+
+  .container {
+    margin-top: 1.5rem;
+  }
+
+  .main-heading {
+    max-width: 475px;
+
+    font-size: 14px;
+  }
+
+  .main-heading p {
+    padding: 0;
+  }
+
+  .columns {
+    grid-template-columns: 1fr;
+    grid-row: auto;
+    row-gap: 2rem;
+  }
+}
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 2rem;
+}
+.attribution a {
+  color: var(--very-dark-blue);
+  text-decoration: none;
+  font-weight: 600;
 }
