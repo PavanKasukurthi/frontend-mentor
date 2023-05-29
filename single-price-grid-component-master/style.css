@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+  /* ### Primary */
+
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+
+  /* ### Neutral */
+
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  display: grid;
+  place-items: center;
+}
+
+.container{
+    max-width: 480px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.subscription{
+    background-color: var(--cyan);
+}
+
+.about{
+    background-color: var(--cyan);
+}
+
+@media screen and (min-width: 480px) {
+    .container{
+        max-width: 600px;
+    }
+    .columns{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
