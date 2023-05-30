@@ -16,35 +16,146 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 body {
   font-family: 'Karla', sans-serif;
-  font-size: 16px;
   display: grid;
   place-items: center;
+  background-color: var(--light-gray);
 }
 
-.container{
-    max-width: 480px;
-    display: grid;
-    grid-template-columns: 1fr;
+.container {
+  max-width: 310px;
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 1fr;
+  border-radius: 0.25rem;
+  overflow: hidden;
 }
 
-.subscription{
-    background-color: var(--cyan);
+.card {
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-.about{
-    background-color: var(--cyan);
+.heading {
+  font-weight: 700;
+}
+
+.content {
+  color: var(--light-gray);
+  font-size: 14px;
+}
+
+.columns {
+  color: white;
+}
+
+button {
+  border: none;
+  color: white;
+  background-color: var(--bright-yellow);
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+/* INTRO CARD */
+
+.intro {
+  background-color: white;
+}
+
+.intro .heading {
+  color: var(--cyan);
+}
+
+.intro .subHeading {
+  color: var(--bright-yellow);
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.intro .content {
+  color: var(--grayish-blue);
+  line-height: 1.5rem;
+}
+
+/* SUBSCRIPTION CARD */
+
+.subscription {
+  background-color: hsl(179, 61%, 41%);
+}
+
+.price {
+  display: flex;
+  align-items: center;
+}
+
+.price p {
+  font-size: 2rem;
+  margin-right: 1rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.price span {
+  color: var(--light-gray);
+}
+
+.subscription .content {
+  color: var(--light-gray);
+  margin-bottom: 2rem;
+}
+
+/* ABOUT CARD */
+
+.about {
+  background-color: var(--cyan);
+}
+
+.about .content {
+  margin-top: 1rem;
+  padding-right: 5.9rem;
+  line-height: 1.3rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 0 3rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
 }
 
 @media screen and (min-width: 480px) {
-    .container{
-        max-width: 600px;
-    }
-    .columns{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
+  .container {
+    max-width: 600px;
+    margin-top: 6rem;
+  }
+  .card {
+    padding: 2rem;
+  }
+  .columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .heading {
+    font-size: 18px;
+  }
+
+  .about .content {
+    padding-right: 3rem;
+  }
 }
