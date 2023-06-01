@@ -196,3 +196,13 @@ header {
     margin-top: 0;
   }
 }
+
+.attribution {
+  color: black;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: white;
+  text-decoration: none;
+}
