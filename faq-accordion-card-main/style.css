@@ -1,0 +1,55 @@
+:root {
+  /* ### Primary */
+
+  /* #### Text */
+
+  --primary-text-1: hsl(238, 29%, 16%);
+  --primary-text-2: hsl(14, 88%, 65%);
+
+  /* #### Gradient */
+
+  /* Background gradient: */
+
+  --gradient-1: hsl(273, 75%, 66%);
+  --gradient-2: hsl(240, 73%, 65%);
+
+  /* ### Neutral */
+
+  /* #### Text */
+
+  --neutral-text-1: hsl(237, 12%, 33%);
+  --neutral-text-2: hsl(240, 6%, 50%);
+
+  /* #### Dividers */
+
+  --divider: hsl(240, 5%, 91%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(var(--gradient-1), var(--gradient-2));
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+
+.container {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 70%;
+  height: 65%;
+  margin-top: 6rem;
+}
+
+.left {
+  background-image: url(images/bg-pattern-desktop.svg);
+}
