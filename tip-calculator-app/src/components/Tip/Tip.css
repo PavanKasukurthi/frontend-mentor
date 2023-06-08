@@ -5,6 +5,7 @@
 .subHeading {
   color: var(--dark-grayish-cyan);
   font-size: 12px;
+  margin-bottom: 0.5rem;
 }
 
 .billInput {
@@ -51,4 +52,16 @@
 
 .numberOfPeople {
   background-image: url(../../../public/images/icon-person.svg);
+}
+
+.subHeading {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 740px) {
+  .button-group {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 2rem;
+  }
 }

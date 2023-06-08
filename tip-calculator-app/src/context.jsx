@@ -5,37 +5,54 @@ const AppContext = createContext()
 export const AppProvider = ({ children }) => {
   const [bill, setBill] = useState('')
   const [tip, setTip] = useState('')
-  const [people, setPeople] = useState('')
-  const [tipAmount, setTipAmount] = useState(0.0)
-  const [total, setTotal] = useState(0.0)
+  const [people, setPeople] = useState("")
+  const [calculatedTip, setCalculatedTip] = useState(0)
+  const [total, setTotal] = useState(0)
+  const [selectedValue, setSelectedValue] = useState('')
 
-  const reset = () => {
-    setTipAmount(0.0)
-    setTotal(0.0)
+  const handleResetBtn = (e) => {
     setBill('')
-    setPeople('')
     setTip('')
+    setPeople('')
+    setHasError(false)
+    setCalculatedTip(0)
+    setTotal(0)
   }
 
-  const calcTip = () => {
-    setTotal((bill * tip) / (people * 100))
+  const [hasError, setHasError] = useState(false)
+
+  const handleRadioChange = (e) => {
+    // Uncheck the radio button if it's already selected
+    if (selectedValue === e.target.value) {
+      setSelectedValue('')
+    } else {
+      setSelectedValue(e.target.value)
+    }
   }
+
+  // const calcTip = () => {
+  //   setTotal((bill * tip) / (people * 100))
+  // }
 
   return (
     <AppContext.Provider
       value={{
-        tipAmount,
-        setTipAmount,
-        total,
-        setTotal,
         bill,
         setBill,
         tip,
         setTip,
         people,
         setPeople,
-        reset,
-        calcTip,
+        calculatedTip,
+        setCalculatedTip,
+        total,
+        setTotal,
+        selectedValue,
+        setSelectedValue,
+        handleRadioChange,
+        handleResetBtn,
+        hasError,
+        setHasError,
       }}
     >
       {children}

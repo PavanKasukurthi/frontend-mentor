@@ -13,13 +13,15 @@
   color: var(--white);
 }
 
-.total, .tipAmount {
+.total,
+.tipAmount {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.tipAmount-right, .total-right{
+.tipAmount-right,
+.total-right {
   font-size: 17px;
   color: var(--strong-cyan);
 }
@@ -33,4 +35,10 @@
   padding: 0.25rem;
   background-color: var(--strong-cyan);
   color: var(--very-dark-cyan);
+}
+
+@media screen and (max-width: 740px) {
+  .reset-btn {
+    margin-top: 1rem;
+  }
 }
