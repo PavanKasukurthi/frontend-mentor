@@ -16,7 +16,7 @@ const Display = () => {
 
   useEffect(() => {
     console.log({ bill, people, tip })
-    if (bill > 0 && people > 0 && tip > 0) {
+    if (bill > 0 && people >= 0 && tip > 0) {
       setCalculatedTip(bill * (tip / 100))
       setTotal((parseInt(calculatedTip) + parseInt(bill)) / people)
     }
@@ -33,7 +33,7 @@ const Display = () => {
           <h1>
             $
             {calculatedTip
-              ? `${(calculatedTip / people).toFixed(2)}` === Infinity
+              ? `${(calculatedTip / people).toFixed(2)}` == Infinity
                 ? '0.00'
                 : `${(calculatedTip / people).toFixed(2)}`
               : '0.00'}
@@ -46,7 +46,14 @@ const Display = () => {
           <p>/ person</p>
         </div>
         <div className="total-right">
-          <h1>${total.toFixed(2)}</h1>
+          <h1>
+            $
+            {{ total }
+              ? `${total.toFixed(2)}` == Infinity
+                ? '0.00'
+                : `${total.toFixed(2)}`
+              : '0.00'}
+          </h1>
         </div>
       </div>
       <button className="reset-btn" onClick={handleResetBtn}>

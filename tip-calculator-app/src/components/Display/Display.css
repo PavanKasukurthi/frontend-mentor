@@ -26,6 +26,12 @@
   color: var(--strong-cyan);
 }
 
+.tipAmount-left p:nth-of-type(2),
+.total-left p:nth-of-type(2) {
+  text-transform: none;
+  color: var(--grayish-cyan);
+}
+
 .reset-btn {
   margin-top: 5.5rem;
   max-height: 30px;

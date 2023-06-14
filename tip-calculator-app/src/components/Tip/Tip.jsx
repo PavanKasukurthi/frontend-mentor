@@ -14,31 +14,11 @@ const Tip = () => {
     total,
     hasError,
     setHasError,
+    handleSubmit,
+    handleBillChange,
+    handleTipChange,
+    handlePeople,
   } = useGlobalContext()
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    calcTip()
-    console.log(total)
-  }
-
-  const handleBillChange = (e) => {
-    setBill(+e.target.value)
-  }
-
-  const handleTipChange = (e) => {
-    setTip(+e.target.value)
-    // console.log(e.target.value)
-  }
-
-  const handlePeople = (e) => {
-    setPeople(+e.target.value)
-
-    {
-      people === 0 ? setHasError(true) : setHasError(false)
-    }
-    // console.log(e.target.value)
-  }
 
   return (
     <div className="tip">
