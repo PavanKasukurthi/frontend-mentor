@@ -13,3 +13,6 @@ Live Project Links:
 9. [**Four card feature section master**](https://four-card-feature-section-pavan.netlify.app/)
 10. **[Single price grid component](https://single-price-grid-component-pavan.netlify.app/)**
 11. **[Huddle single page](https://huddle-single-page-pavan.netlify.app/)**
+12. **[Order summary component](https://order-summary-component-pavan.netlify.app/)**
+13. **[Tip calculator app](https://tip-calculator-app-pavan.netlify.app/)**
+14. **[Base apparel coming soon page](https://base-apparel-coming-soon-master-pavan.netlify.app/)**
