@@ -2,9 +2,12 @@ import { styled } from 'styled-components'
 import data from '../../data.json'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import CountryCard from './CountryCard'
+import { useGlobalContext } from '../context'
 
 const Cards = () => {
   const navigate = useNavigate()
+
+  const { setName } = useGlobalContext()
 
   return (
     <Wrapper>
@@ -28,13 +31,29 @@ const Cards = () => {
       </div>
       <div className="container">
         {data.map((item) => {
-          const { alpha3Code, flag, flags, name, population, region, capital } =
-            item
+          const {
+            alpha3Code,
+            flag,
+            flags,
+            name,
+            population,
+            region,
+            capital,
+            nativeName,
+            subregion,
+            topLevelDomain,
+            currencies,
+            languages,
+            borders,
+          } = item
           return (
             <div
               className="card"
               key={name}
-              onClick={() => navigate(`/${alpha3Code}`)}
+              onClick={(e) => {
+                navigate(`/${alpha3Code}`)
+                setName(name)
+              }}
             >
               <img src={flag} alt="flags" className="flags" />
               <div className="content">
