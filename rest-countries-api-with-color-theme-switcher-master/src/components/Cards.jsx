@@ -7,7 +7,7 @@ import { useGlobalContext } from '../context'
 const Cards = () => {
   const navigate = useNavigate()
 
-  const { setName } = useGlobalContext()
+  const { setName, setData } = useGlobalContext()
 
   return (
     <Wrapper>
@@ -52,7 +52,18 @@ const Cards = () => {
               key={name}
               onClick={(e) => {
                 navigate(`/${alpha3Code}`)
-                setName(name)
+                setData({
+                  flag: flag,
+                  name: name,
+                  nativeName: nativeName,
+                  population: population,
+                  region: region,
+                  subRegion: subregion,
+                  capital: capital,
+                  currencies: [...currencies],
+                  languages: [...languages],
+                  borderCountries: [...borders],
+                })
               }}
             >
               <img src={flag} alt="flags" className="flags" />

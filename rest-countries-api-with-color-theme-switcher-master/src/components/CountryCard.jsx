@@ -3,17 +3,17 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import { useGlobalContext } from '../context'
 
 const CountryCard = () => {
-  const { name } = useGlobalContext()
+  const { name, data } = useGlobalContext()
 
   const navigate = useNavigate()
   let { alpha3code } = useParams()
-  console.log(name)
+  console.log(data.flag)
 
   return (
     <Wrapper>
       <button onClick={() => navigate(-1)}>back</button>
       <h1>CountryCard</h1>
-      <p>{name}</p>
+      {/* <p>{name}</p> */}
     </Wrapper>
   )
 }

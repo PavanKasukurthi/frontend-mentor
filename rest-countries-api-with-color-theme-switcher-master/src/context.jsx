@@ -3,11 +3,26 @@ import { createContext, useContext, useState } from 'react'
 const AppContext = createContext()
 
 export const AppProvider = ({ children }) => {
-  const [flag, setFlag] = useState('')
-  const [name, setName] = useState('')
+  const [data, setData] = useState({
+    flag: '',
+    name: '',
+    nativeName: '',
+    population: '',
+    region: '',
+    subRegion: '',
+    capital: '',
+    currencies: [],
+    languages: [],
+    borderCountries: [],
+  })
 
   return (
-    <AppContext.Provider value={{ flag, setFlag, name, setName }}>
+    <AppContext.Provider
+      value={{
+        data,
+        setData,
+      }}
+    >
       {children}
     </AppContext.Provider>
   )
