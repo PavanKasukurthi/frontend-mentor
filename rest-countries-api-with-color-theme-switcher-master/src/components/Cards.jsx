@@ -62,7 +62,7 @@ const Cards = () => {
                   capital: capital,
                   currencies: [...currencies],
                   languages: [...languages],
-                  borderCountries: [...borders],
+                  borderCountries: [borders],
                 })
               }}
             >
