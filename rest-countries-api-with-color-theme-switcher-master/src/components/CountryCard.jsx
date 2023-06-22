@@ -1,17 +1,19 @@
 import styled from 'styled-components'
-import { useLocation, useNavigate, useParams } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { useGlobalContext } from '../context'
+import defaultData from '../../data.json'
 
 const CountryCard = () => {
   const { data } = useGlobalContext()
 
   const navigate = useNavigate()
-  let { alpha3code } = useParams()
-  console.log(data)
+  // console.log(data)
 
   return (
     <Wrapper>
-      <button onClick={() => navigate(-1)}>back</button>
+      <button className="back-btn" onClick={() => navigate(-1)}>
+        back
+      </button>
       <div className="container">
         <div className="flag-img">
           <img src={data.flag} alt="flag" className="flag" />
@@ -42,14 +44,14 @@ const CountryCard = () => {
                 <span className="value"> {data.capital} </span>
               </p>
               <p className="subHeading">
-                Currencies: <span className="value">  </span>
+                Currencies: <span className="value"> </span>
               </p>
               <p className="subHeading">
                 Languages: <span className="value">{}</span>
               </p>
             </div>
           </div>
-          <p>Border Countries: </p>
+          <p className="subHeading">Border Countries: </p>
         </div>
       </div>
     </Wrapper>
@@ -58,18 +60,49 @@ const CountryCard = () => {
 
 const Wrapper = styled.main`
   margin-bottom: 7rem;
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+
+  .back-btn {
+    padding: 0.5rem 2rem;
+    text-transform: capitalize;
+    border: none;
+    background-color: transparent;
+    box-shadow: 0 0 4px var(--light-mode-input);
   }
 
-  .flag{
+  .back-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 8px var(--light-mode-input);
+  }
+
+  .container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-top: 3rem;
+  }
+
+  .flag {
     max-width: 90%;
   }
-  .sub-headings{
+
+  .content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .sub-headings {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .subHeading {
+    font-weight: 600;
+  }
+
+  .value {
+    font-weight: 300;
   }
 `
 export default CountryCard
