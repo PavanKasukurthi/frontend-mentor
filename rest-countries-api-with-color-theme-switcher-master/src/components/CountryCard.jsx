@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useGlobalContext } from '../context'
-import defaultData from '../../data.json'
 
 const CountryCard = () => {
   const { data } = useGlobalContext()
