@@ -23,6 +23,11 @@
         <img src="assets/images/logo.svg" alt="logo" />
 
         <div class="links">
+          <img
+            src="assets/images/icon-menu.svg"
+            alt="icon-menu"
+            class="icon-menu"
+          />
           <a href="#home">Home</a>
           <a href="#new">New</a>
           <a href="#popular">Popular</a>
@@ -34,11 +39,35 @@
       <div class="row-1">
         <div class="col-1">
           <div class="sub-row-1">
-            <img
+            <div>
+              <picture>
+                <source
+                  media="(min-width:550px)"
+                  srcset="assets/images/image-web-3-desktop.jpg"
+                  class="image-web"
+                />
+                <source
+                  media="(max-width:500px)"
+                  srcset="assets/images/image-web-3-mobile.jpg"
+                  class="image-web"
+                />
+                <img
+                  src="assets/images/image-web-3-desktop.jpg"
+                  alt="image-web"
+                  class="image-web"
+                />
+                <img
+                  src="assets/images/image-web-3-mobile.jpg"
+                  alt="image-web"
+                  class="image-web image-mobile"
+                />
+              </picture>
+            </div>
+            <!-- <img
               src="assets/images/image-web-3-desktop.jpg"
               alt=""
               class="image-web"
-            />
+            /> -->
           </div>
           <div class="sub-row-2">
             <p class="heading">The Bright Future of Web 3.0?</p>
