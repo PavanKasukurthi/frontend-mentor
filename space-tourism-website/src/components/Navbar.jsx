@@ -1,15 +1,15 @@
 import logo from '../assets/shared/logo.svg'
 import hamburger from '../assets/shared/icon-hamburger.svg'
 import close from '../assets/shared/icon-close.svg'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false)
 
-  useEffect(() => {
-    console.log(mobileMenu)
-  }, [mobileMenu])
+  const closeMenu = () => {
+    setMobileMenu(false)
+  }
 
   return (
     <header>
@@ -19,16 +19,16 @@ const Navbar = () => {
         </div>
 
         <ul>
-          <li className="active">
+          <li onClick={closeMenu} className="active">
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li onClick={closeMenu}>
             <Link to="/destination">Destination</Link>
           </li>
-          <li>
+          <li onClick={closeMenu}>
             <Link to="/crew">Crew</Link>
           </li>
-          <li>
+          <li onClick={closeMenu}>
             <Link to="/technology">Technology</Link>
           </li>
         </ul>

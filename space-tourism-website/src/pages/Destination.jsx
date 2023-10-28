@@ -1,5 +1,5 @@
 import data from '../../data.json'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 
 import moon from '../assets/destination/image-moon.png'
 import mars from '../assets/destination/image-mars.png'
@@ -7,33 +7,65 @@ import europa from '../assets/destination/image-europa.png'
 import titan from '../assets/destination/image-titan.png'
 
 const Destination = () => {
-  console.log(data.destinations)
+  // console.log(data.destinations)
   const [planetNumber, setPlanetNumber] = useState(0)
 
+  const navigation = useRef()
+
   let planetImages = [moon, mars, europa, titan]
+
+  const tabChange = (e) => {
+    setPlanetNumber(e.target.dataset.index)
+
+    let children = navigation.current.children
+
+    for (let i = 0; i < children.length; i++) {
+      const child = children[i]
+      child.classList.remove('active')
+    }
+
+    e.target.classList.add('active')
+  }
+
   return (
     <div className="destination">
       <div className="destination-content">
         <>
           <h1 className="destination-content-subtitle">
-            <span>01</span>Pick your destination
+            <span>01</span> Pick your destination
           </h1>
 
           <div className="destination-content-image">
             <img src={planetImages[planetNumber]} alt="moon" />
           </div>
 
-          <div className="destination-content-navigation">
-            <div className="tab" onClick={() => setPlanetNumber(0)}>
+          <div ref={navigation} className="destination-content-navigation">
+            <div
+              className="tab"
+              data-index={0}
+              onClick={tabChange}
+            >
               moon
             </div>
-            <div className="tab" onClick={() => setPlanetNumber(1)}>
+            <div
+              className="tab"
+              data-index={1}
+              onClick={tabChange}
+            >
               mars
             </div>
-            <div className="tab" onClick={() => setPlanetNumber(2)}>
+            <div
+              className="tab"
+              data-index={2}
+              onClick={tabChange}
+            >
               europa
             </div>
-            <div className="tab" onClick={() => setPlanetNumber(3)}>
+            <div
+              className="tab"
+              data-index={3}
+              onClick={tabChange}
+            >
               titan
             </div>
           </div>

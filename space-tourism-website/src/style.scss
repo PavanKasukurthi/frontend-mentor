@@ -9,6 +9,8 @@
 body {
   font-family: 'Barlow';
   overflow-x: hidden;
+  max-width: 100vw;
+  max-height: 100vh;
 }
 
 .container {
@@ -64,6 +66,7 @@ body {
 
       .burger {
         z-index: 11;
+        cursor: pointer;
       }
     }
     .nav.show {
@@ -113,6 +116,7 @@ body {
 
       .home-content-info {
         font-size: 0.8rem;
+        line-height: 1.5;
       }
 
       .home-content-explore {
@@ -163,8 +167,8 @@ body {
 // DESTINATION
 .destination {
   width: 100%;
-  height: 100vh;
-  background-image: url(./assets/home/background-home-mobile.jpg);
+  min-height: 100vh;
+  background-image: url(./assets/destination/background-destination-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -174,17 +178,87 @@ body {
   align-items: center;
   justify-content: center;
 
+  padding-top: 5rem;
+
   .destination-content {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    padding-inline: 1.5rem;
 
     .destination-content-image {
-      width: 90%;
+      width: 50%;
 
       img {
         width: 100%;
+      }
+    }
+
+    .destination-content-subtitle {
+      font-size: 1.5rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.7rem;
+      span {
+        color: rgba(255, 255, 255, 0.25);
+      }
+    }
+
+    .destination-content-navigation {
+      display: flex;
+      gap: 1.5rem;
+
+      .tab {
+        padding: 0.8rem;
+        cursor: pointer;
+      }
+
+      .tab.active {
+        border-bottom: 2px solid white;
+      }
+    }
+
+    .destination-content-title {
+      font-size: 2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.7rem;
+    }
+
+    .destination-content-body {
+      font-size: 1.1rem;
+      line-height: 1.3;
+    }
+
+    .destination-content-info {
+      border-top: 1px solid #383b4b;
+      width: 100%;
+      padding-block: 1rem;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      text-transform: uppercase;
+
+      padding-bottom: 5rem;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        p {
+          letter-spacing: 0.3rem;
+        }
+
+        h1 {
+          font-weight: 400;
+        }
       }
     }
   }
