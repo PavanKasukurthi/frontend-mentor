@@ -2,7 +2,7 @@ import logo from '../assets/shared/logo.svg'
 import hamburger from '../assets/shared/icon-hamburger.svg'
 import close from '../assets/shared/icon-close.svg'
 import { useEffect, useState } from 'react'
-import { NavLinks } from './index'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false)
@@ -12,28 +12,36 @@ const Navbar = () => {
   }, [mobileMenu])
 
   return (
-    <>
-      <nav className="navbar px-6 bg-transparent">
-        <div className="navbar-start">
-          <img src={logo} alt="logo" className="bg-transparent" />
+    <header>
+      <nav className={`nav ${mobileMenu ? 'show' : ''}`}>
+        <div className="logo">
+          <img src={logo} alt="logo" />
         </div>
-        <div className="navbar-end">
+
+        <ul>
+          <li className="active">
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/destination">Destination</Link>
+          </li>
+          <li>
+            <Link to="/crew">Crew</Link>
+          </li>
+          <li>
+            <Link to="/technology">Technology</Link>
+          </li>
+        </ul>
+
+        <div className="burger">
           <img
-            src={mobileMenu ? `${close}` : `${hamburger}`}
-            alt="hamburger"
-            className="md:hidden"
+            src={mobileMenu ? close : hamburger}
+            alt="burger"
             onClick={() => setMobileMenu(!mobileMenu)}
           />
         </div>
       </nav>
-
-      {/* MOBILE MENU */}
-      <div className="h-full flex justify-end px-6 md:hidden">
-        <ul>
-          <NavLinks className="links flex flex-col" />
-        </ul>
-      </div>
-    </>
+    </header>
   )
 }
 export default Navbar

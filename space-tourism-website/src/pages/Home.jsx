@@ -1,32 +1,16 @@
-import backgroundDesktop from '../assets/home/background-home-desktop.jpg'
-import backgroundTablet from '../assets/home/background-home-tablet.jpg'
-import backgroundMobile from '../assets/home/background-home-mobile.jpg'
-
 const Home = () => {
   return (
-    <>
+    <div className='home'>
       {/* BACKGROUND */}
-      <section>
-        <div
-          className="bg-cover bg-no-repeat h-screen w-screen z-50 bg-white hidden lg:flex"
-          style={{
-            backgroundImage: `url(${backgroundDesktop})`,
-          }}
-        ></div>
-        <div
-          className="bg-cover bg-no-repeat h-screen w-screen z-50 bg-white hidden md:flex lg:hidden"
-          style={{
-            backgroundImage: `url(${backgroundTablet})`,
-          }}
-        ></div>
-        <div
-          className="bg-cover bg-no-repeat h-screen w-screen z-50 bg-white sm:flex md:hidden"
-          style={{
-            backgroundImage: `url(${backgroundMobile})`,
-          }}
-        ></div>
-      </section>
-    </>
+      <div className="home-content">
+        <div className="home-content-subtitle">
+          so, you want to travel to
+        </div>
+        <h1 className="home-content-title">
+          
+        </h1>
+      </div>
+    </div>
   )
 }
 export default Home
