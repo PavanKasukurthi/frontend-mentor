@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './style.scss'
-import { Home, Crew } from './pages'
+import { Home, Crew, Destination, Technology } from './pages'
 import { Navbar } from './components'
 
 const App = () => {
@@ -11,6 +11,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/crew" element={<Crew />} />
+          <Route path="/destination" element={<Destination />} />
+          <Route path="/technology" element={<Technology />} />
         </Routes>
       </Router>
     </div>
