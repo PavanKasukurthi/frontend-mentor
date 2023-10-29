@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
-    <div className="home">
+    <div className="home-section  ">
       {/* BACKGROUND */}
       <div className="home-content">
         <div className="home-content-subtitle">so, you want to travel to</div>
@@ -12,10 +12,10 @@ const Home = () => {
           go to outer space and not hover kind of on the edge of it. Well sit
           back, and relax because we’ll give you a truly out of this world
           experience!
-        </p>
-        <div className="home-content-explore">
-          <Link to="/explore">explore</Link>
-        </div>
+        </p>{' '}
+        <Link to="/destination" className="home-content-explore">
+          explore
+        </Link>
       </div>
     </div>
   )

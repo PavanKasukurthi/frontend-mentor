@@ -28,7 +28,7 @@ const Destination = () => {
   }
 
   return (
-    <div className="destination">
+    <div className="destination-section">
       <div className="destination-content">
         <>
           <h1 className="destination-content-subtitle">
@@ -40,32 +40,16 @@ const Destination = () => {
           </div>
 
           <div ref={navigation} className="destination-content-navigation">
-            <div
-              className="tab"
-              data-index={0}
-              onClick={tabChange}
-            >
+            <div className="tab" data-index={0} onClick={tabChange}>
               moon
             </div>
-            <div
-              className="tab"
-              data-index={1}
-              onClick={tabChange}
-            >
+            <div className="tab" data-index={1} onClick={tabChange}>
               mars
             </div>
-            <div
-              className="tab"
-              data-index={2}
-              onClick={tabChange}
-            >
+            <div className="tab" data-index={2} onClick={tabChange}>
               europa
             </div>
-            <div
-              className="tab"
-              data-index={3}
-              onClick={tabChange}
-            >
+            <div className="tab" data-index={3} onClick={tabChange}>
               titan
             </div>
           </div>
