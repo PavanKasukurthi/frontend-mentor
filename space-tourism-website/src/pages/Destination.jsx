@@ -40,7 +40,7 @@ const Destination = () => {
           </div>
 
           <div ref={navigation} className="destination-content-navigation">
-            <div className="tab" data-index={0} onClick={tabChange}>
+            <div className="tab active" data-index={0} onClick={tabChange}>
               moon
             </div>
             <div className="tab" data-index={1} onClick={tabChange}>

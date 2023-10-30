@@ -14,7 +14,7 @@ const Navbar = () => {
 
   const location = useLocation()
 
-  console.log(location)
+  // console.log(location)
 
   const closeMenu = () => {
     setMobileMenu(false)
@@ -32,7 +32,9 @@ const Navbar = () => {
     <header>
       <nav className={`nav ${mobileMenu ? 'show' : ''}`}>
         <div className="logo">
-          <img src={logo} alt="logo" />
+          <Link to="/">
+            <img src={logo} alt="logo" />
+          </Link>
         </div>
 
         <ul className={`ul ${active}`}>

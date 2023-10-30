@@ -28,14 +28,16 @@ const Crew = () => {
 
   return (
     <div className="crew-section">
-      <div className="crew-subtitle">02 meet your crew</div>
+      <div className="crew-subtitle">
+        <span>02</span> meet your crew
+      </div>
       {
         <>
           <div className="crew-image">
             <img src={crewImages[crewIndex]} alt="" />
           </div>
           <div ref={crewNavigation} className="crew-navigation">
-            <div data-index={0} onClick={changeTab} className="crew-tab">
+            <div data-index={0} onClick={changeTab} className="crew-tab active">
               {' '}
             </div>
             <div data-index={1} onClick={changeTab} className="crew-tab">
