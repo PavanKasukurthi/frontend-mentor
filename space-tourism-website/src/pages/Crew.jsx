@@ -1,10 +1,10 @@
 import { useRef, useState } from 'react'
 import data from '../../data.json'
 
-import firstCrew from '../assets/crew/image-douglas-hurley.png'
-import secondCrew from '../assets/crew/image-mark-shuttleworth.png'
-import thirdCrew from '../assets/crew/image-victor-glover.png'
-import fourthCrew from '../assets/crew/image-anousheh-ansari.png'
+import firstCrew from '../../public/assets/crew/image-douglas-hurley.png'
+import secondCrew from '../../public/assets/crew/image-mark-shuttleworth.png'
+import thirdCrew from '../../public/assets/crew/image-victor-glover.png'
+import fourthCrew from '../../public/assets/crew/image-anousheh-ansari.png'
 
 const Crew = () => {
   const [crewIndex, setCrewIndex] = useState(0)

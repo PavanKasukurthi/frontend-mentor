@@ -1,10 +1,10 @@
 import data from '../../data.json'
 import { useRef, useState } from 'react'
 
-import moon from '../assets/destination/image-moon.png'
-import mars from '../assets/destination/image-mars.png'
-import europa from '../assets/destination/image-europa.png'
-import titan from '../assets/destination/image-titan.png'
+import moon from '../../public/assets/destination/image-moon.png'
+import mars from '../../public/assets/destination/image-mars.png'
+import europa from '../../public/assets/destination/image-europa.png'
+import titan from '../../public/assets/destination/image-titan.png'
 
 const Destination = () => {
   // console.log(data.destinations)

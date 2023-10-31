@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
 import data from '../../data.json'
 
-import firstTechnologyImage from '../assets/technology/image-launch-vehicle-landscape.jpg'
-import secondTechnologyImage from '../assets/technology/image-space-capsule-landscape.jpg'
-import thirdTechnologyImage from '../assets/technology/image-spaceport-landscape.jpg'
+import firstTechnologyImage from '../../public/assets/technology/image-launch-vehicle-landscape.jpg'
+import secondTechnologyImage from '../../public/assets/technology/image-space-capsule-landscape.jpg'
+import thirdTechnologyImage from '../../public/assets/technology/image-spaceport-landscape.jpg'
 
-import mobileFirstTechnologyImage from '../assets/technology/image-launch-vehicle-portrait.jpg'
-import mobileSecondTechnologyImage from '../assets/technology/image-space-capsule-portrait.jpg'
-import mobileThirdTechnologyImage from '../assets/technology/image-spaceport-portrait.jpg'
+import mobileFirstTechnologyImage from '../../public/assets/technology/image-launch-vehicle-portrait.jpg'
+import mobileSecondTechnologyImage from '../../public/assets/technology/image-space-capsule-portrait.jpg'
+import mobileThirdTechnologyImage from '../../public/assets/technology/image-spaceport-portrait.jpg'
 
 const Technology = () => {
   const [technologyIndex, setTechnologyIndex] = useState(0)
