@@ -1,5 +1,5 @@
 import './App.css'
-import { Heading, Todo } from './components'
+import { Heading, Input, Todo } from './components'
 import lightBackgroundImage from './images/bg-desktop-light.jpg'
 import darkBackgroundImage from './images/bg-desktop-dark.jpg'
 import { useGlobalContext } from './context'
@@ -20,6 +20,7 @@ function App() {
       >
         <div id="container" className="w-[40%] flex flex-col justify-center">
           <Heading />
+          <Input />
           <Todo />
         </div>
       </div>
