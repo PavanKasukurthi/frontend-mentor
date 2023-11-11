@@ -1,31 +1,34 @@
+import styled from 'styled-components'
 import './App.css'
-import { Heading, Input, Todo } from './components'
-import lightBackgroundImage from './images/bg-desktop-light.jpg'
-import darkBackgroundImage from './images/bg-desktop-dark.jpg'
+import TodoWrapper from './components/TodoWrapper'
+import backg from './images/bg-desktop-light.jpg'
+
 import { useGlobalContext } from './context'
 
 function App() {
   const { colorMode } = useGlobalContext()
-
   return (
-    <>
-      <div
-        className=" h-80 w-screen bg-cover bg-no-repeat flex justify-center transition-all duration-500"
-        style={{
-          backgroundImage:
-            colorMode === true
-              ? `url(${lightBackgroundImage})`
-              : `url(${darkBackgroundImage})`,
-        }}
-      >
-        <div id="container" className="w-[40%] flex flex-col justify-center">
-          <Heading />
-          <Input />
-          <Todo />
-        </div>
+    <Wrapper>
+      <div className="container">
+        <TodoWrapper />
       </div>
-    </>
+    </Wrapper>
   )
 }
 
 export default App
+
+export const Wrapper = styled.main`
+  .container {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url('./images/bg-desktop-light.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+`
