@@ -1,48 +1,77 @@
 import './App.css'
-import { useDispatch, useSelector } from 'react-redux'
-import {
-  add,
-  divide,
-  multiply,
-  selectValue,
-  subtract,
-  total,
-} from './features/calc/calcSlice'
+
 import { useState } from 'react'
 
 function App() {
-  const dispatch = useDispatch()
-  const value = useSelector(selectValue)
+  const [calc, setCalc] = useState('')
+  const [result, setResult] = useState('')
 
-  const [input, setInput] = useState('')
+  const ops = ['/', '*', '+', '-', '.']
 
-  const handleInputChange = (e) => {
-    setInput(e.target.value)
+  const updateCalc = (value) => {
+    if (
+      (ops.includes(value) && calc === '') ||
+      (ops.includes(value) && ops.includes(calc.slice(-1)))
+    )
+      return
+    setCalc(calc + value)
+
+    if (!ops.includes(value)) {
+      setResult(eval(calc + value).toString())
+    }
   }
 
-  const handleOperation = (operation) => {
-    if (input !== '') {
-      dispatch(operation(Number(input)))
-      setInput('')
+  const createDigits = () => {
+    const digits = []
+
+    for (let i = 1; i < 10; i++) {
+      digits.push(
+        <button key={i} onClick={() => updateCalc(i.toString())}>
+          {i}
+        </button>
+      )
     }
+
+    return digits
+  }
+
+  const calculate = () => {
+    setCalc(eval(calc).toString())
+  }
+
+  const deleteLast = () => {
+    if (calc === '') {
+      return
+    }
+    const value = calc.slice(0, -1)
+
+    setCalc(value)
   }
 
   return (
     <>
-      <h1>Calculator App</h1>
-      <div>
-        <input type="text" value={input} onChange={handleInputChange} />
-      </div>
-      <div>
-        <button onClick={() => handleOperation(add)}> +</button>
-        <button onClick={() => handleOperation(subtract)}> -</button>
-        <button onClick={() => handleOperation(multiply)}> *</button>
-        <button onClick={() => handleOperation(divide)}> /</button>
-        <button onClick={() => handleOperation(total)}> =</button>
-      </div>
+      <div className="App">
+        <div className="calculator">
+          <div className="display">
+            {result ? <span>({result})</span> : ''} {calc || '0'}
+          </div>
+          <div className="operators">
+            <button onClick={() => updateCalc('/')}>/</button>
+            <button onClick={() => updateCalc('*')}>*</button>
+            <button onClick={() => updateCalc('+')}>+</button>
+            <button onClick={() => updateCalc('-')}>-</button>
 
-      <div>
-        <p>{value}</p>
+            <button onClick={deleteLast}>DEL</button>
+          </div>
+
+          <div className="digits">
+            {createDigits()}
+            <button onClick={() => updateCalc('.')}>.</button>
+            <button onClick={() => updateCalc('0')}>0</button>
+
+            <button onClick={calculate}>=</button>
+          </div>
+        </div>
       </div>
     </>
   )
