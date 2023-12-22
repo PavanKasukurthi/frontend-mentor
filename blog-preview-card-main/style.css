@@ -27,13 +27,15 @@ body {
   align-items: center;
   font-size: 16px;
   font-weight: 600;
+
+  min-height: 100vh;
 }
 
 .container {
   background-color: var(--neutral-color-1);
   height: fit-content;
   width: 20rem;
-  margin-top: 7rem;
+  /* margin-top: 7rem; */
 
   border: 1px solid var(--neutral-color-3);
 
@@ -72,6 +74,11 @@ img {
   font-weight: 800;
   font-size: 1.2rem;
   color: var(--neutral-color-3);
+}
+
+.heading:hover {
+  color: var(--primary-color);
+  cursor: pointer;
 }
 
 .info {

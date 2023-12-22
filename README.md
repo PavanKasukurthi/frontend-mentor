@@ -17,3 +17,4 @@ Live Project Links:
 13. **[Tip calculator app](https://tip-calculator-app-pavan.netlify.app/)**
 14. **[Base apparel coming soon page](https://base-apparel-coming-soon-master-pavan.netlify.app/)**
 15. [**Space tourism website**](https://space-tourism-website-pavan.netlify.app/)
+16. **[Blog preview card](https://blog-preview-card-pavan.netlify.app/)**
